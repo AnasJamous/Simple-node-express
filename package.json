@@ -1,0 +1,26 @@
+{
+  "name": "express-api-basics",
+  "version": "1.0.0",
+  "description": "simple node express ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coditech/express-api-basics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coditech/express-api-basics/issues"
+  },
+  "homepage": "https://github.com/coditech/express-api-basics#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.15.1"
+  }
+}
