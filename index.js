@@ -9,6 +9,13 @@ const getTime = () => {
     return current_hour+':'+current_minute+':'+current_seconds
 }
 
+const movies = [
+    { title: 'Jaws', year: 1975, rating: 8 },
+    { title: 'Avatar', year: 2009, rating: 7.8 },
+    { title: 'Brazil', year: 1985, rating: 8 },
+    { title: 'الإرهاب والكباب‎', year: 1992, rating: 6.2 }
+]
+
 // The Home page :
 app.get('/', (req, res) => res.send('batata'))
 
@@ -51,6 +58,24 @@ app.get('/search?:s',(req,res)=>{
     `)
         res.send()
     }
+})
+
+// Movies pages:
+app.get('/movies/create', (req,res)=>{
+    res.send({status:200, message:''})
+})
+app.get('/movies/read', (req,res)=>{
+    let titles = [];
+    for (let i =0 ; i < movies.length ; i++){
+        titles[i] = movies[i].title;
+    }
+    res.send({status:200 , data:titles})
+})
+app.get('/movies/update', (req,res)=>{
+    res.send({status:200, message:'This is movies page'})
+})
+app.get('/movies/delete', (req,res)=>{
+    res.send({status:200, message:'This is movies page'})
 })
 
 
